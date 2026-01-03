@@ -1,0 +1,18 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== FIX SCROLL ISSUE ===== */
+html,
+body,
+#root {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+  background: #0d0d10;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}

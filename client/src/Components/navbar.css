@@ -1,0 +1,172 @@
+/* ===== Navbar Wrapper ===== */
+.navbar {
+  width: 100%;
+  background: #0f0f12;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ===== Inner Container ===== */
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== Left (Brand) ===== */
+.navbar-left {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar-left:hover {
+  color: #ff4d6d;
+}
+
+/* ===== Right Links ===== */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* ===== Nav Items ===== */
+.navbar-right span {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #cfcfd6;
+  cursor: pointer;
+  position: relative;
+
+  transition: color 0.2s ease;
+}
+
+/* Hover underline effect */
+.navbar-right span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+  border-radius: 2px;
+
+  background: linear-gradient(90deg, #e63946, #ff4d6d);
+  transition: width 0.25s ease;
+}
+
+.navbar-right span:hover {
+  color: #ffffff;
+}
+
+.navbar-right span:hover::after {
+  width: 100%;
+}
+
+/* ===== Logout (Danger Action) ===== */
+.navbar-right .logout {
+  color: #e63946;
+  font-weight: 500;
+}
+
+.navbar-right .logout::after {
+  background: #e63946;
+}
+
+.navbar-right .logout:hover {
+  color: #ff4d6d;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .navbar-inner {
+    padding: 14px 18px;
+  }
+
+  .navbar-right {
+    gap: 18px;
+  }
+
+  .navbar-right span {
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #cfcfd6;
+  position: relative;
+}
+
+.nav-link.active {
+  color: #ffffff;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+/* NavLink base */
+.nav-link {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #cfcfd6;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+/* Hover underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+  border-radius: 2px;
+
+  background: linear-gradient(90deg, #e63946, #ff4d6d);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ✅ ACTIVE TAB */
+.nav-link.active {
+  color: #ffffff;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+

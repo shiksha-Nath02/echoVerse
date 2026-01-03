@@ -1,0 +1,101 @@
+for this project...
+
+1> make all the folders
+2> setup prisma
+
+----------------------
+jwt-> user jisne abhi login kiya tha wahi baar baar login kis koshish kiya tha
+hmne token ka use kiya tha 
+mujhe naar baar sighup na karn apde ya sighup na karna pde
+we will not store in local storage but a cookie
+---------------------------
+why cookie?- ki koi js ke through meri cookie ko read nhi kar skta. backend pe jayegi but frontend se acces nhi kar skte balki local storage kar skte hai.
+-----------------------------
+we have used router and not app beacuse router 
+express.Router → function
+
+router → object (created by calling that function)
+
+router.post(...) → uses the object to define a route
+--------------------------------
+install->
+0> npm init -y
+1> npn i express
+2> jsonwebtoken
+3> dotenv
+4> bcryptjs-> passward hash karke store karna
+5> cors-> ek server dosre server ke request ke badle info share karta hai... 
+------------------------------------
+
+PRISMA is orm ( object relational mapping ) used to connect js and sql
+
+prisma client-auto-generated and type-sage query builder for Node.js & typescrips.
+prisma migrate- migration system 
+prisma studio- Gui to view ans edit data in db
+
+in this schema we configure-> 
+data source- specify data base connected 
+generator-indicate thhat we wnat to generate prisma client
+data model-defines your application models 
+
+
+            Username: postgres(after postgresql://)
+            Password: 1037-Shiksha(after username and :)
+            Database: shikshadb (after port 5432/)
+
+            >>psql -U postgres
+
+            >>CREATE DATABASE project ;
+
+            >>Create user- CREATE USER saatvik WITH PASSWORD 'saatvik';
+
+            >>Grant access to DB -	GRANT ALL PRIVILEGES ON DATABASE medium TO saatvik;
+
+
+        >>psql -U postgres -h localhost -p 5432 -d shikshadb (to enter db)
+
+        >>psql -U postgres -h localhost -p 5432
+
+            >>Change ownership	- ALTER DATABASE users OWNER TO myuser;
+            
+            >>Grant CREATEDB privilege to your user (saatvik):  ALTER USER saatvik CREATEDB;
+
+
+
+PRISMA commands:-
+
+        Prisma Client is an auto-generated, type-safe JavaScript/TypeScript library used to interact with your database using Prisma.
+
+        prisma is a dev dependency i.e. it is needed while the process of  development not in the final project
+
+
+        >>npm install prisma --save-dev
+        >>npm install @prisma/client
+        >>npx prisma init
+
+        >>npx prisma generate
+
+        Add the table model to schema.prisma and update the database_url in .env  file
+        >> DATABASE_URL="postgresql://postgres:mysecretpassword@localhost:5432/mydatabase"
+
+        >>npx prisma migrate dev --name initialising 
+         (for migration (to track changes over time)) 
+        migration helps to change the code to sql queries
+
+        NOTE- whenver a change in database (eg change in schema or adding new schema or model)is made we use the command of migration
+
+https://docs.google.com/presentation/d/1qhYA5CnmuyLedhwE4t9xFtaKGL69-j-7wvXvU5cBFFc/edit?slide=id.g35f354ed7a6_0_32&pli=1#slide=id.g35f354ed7a6_0_32
+
+google slides link for prisma
+
+        >>npx prisma studio (to open table)
+
+
+TO START BACKEND SWEVER-> nodemon index.js port-4444
+TO START FRONTEND SERVER-> npm run dev port-5173
+TO SEE PRISMA DATABASE-> npx prisma studio port-5556
+
+
+redux tool kit-> npm install @reduxjs/toolkit react-redux
+
+//MVP- minimum viable product
