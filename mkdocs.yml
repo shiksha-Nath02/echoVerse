@@ -1,0 +1,16 @@
+site_name: EchoVerse Documentation
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Database: database.md
+  - API: api.md
+  - Deployment: deployment.md
