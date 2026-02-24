@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "id": "backend",
+      "label": "Express API",
+      "category": "Server",
+      "description": "Node.js Express backend",
+      "stack": [
+        "Node.js",
+        "Express"
+      ]
+    },
+    {
+      "id": "routes",
+      "label": "Routes Layer",
+      "category": "Application",
+      "description": "Express route definitions",
+      "stack": []
+    },
+    {
+      "id": "controllers",
+      "label": "Controllers Layer",
+      "category": "Application",
+      "description": "Business logic handlers",
+      "stack": []
+    },
+    {
+      "id": "middleware",
+      "label": "Middleware Layer",
+      "category": "Application",
+      "description": "Request middleware",
+      "stack": []
+    },
+    {
+      "id": "prisma",
+      "label": "Prisma ORM",
+      "category": "ORM",
+      "description": "Database ORM layer",
+      "stack": [
+        "Prisma"
+      ]
+    },
+    {
+      "id": "database",
+      "label": "Database",
+      "category": "Database",
+      "description": "Relational database",
+      "stack": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "backend-prisma",
+      "from": "backend",
+      "to": "prisma",
+      "label": "ORM Calls"
+    },
+    {
+      "id": "prisma-database",
+      "from": "prisma",
+      "to": "database",
+      "label": "SQL Queries"
+    },
+    {
+      "id": "middleware-routes",
+      "from": "middleware",
+      "to": "routes",
+      "label": "Request Pipeline"
+    },
+    {
+      "id": "routes-controllers",
+      "from": "routes",
+      "to": "controllers",
+      "label": "Route Handlers"
+    },
+    {
+      "id": "controllers-prisma",
+      "from": "controllers",
+      "to": "prisma",
+      "label": "Database Access"
+    }
+  ]
+}
