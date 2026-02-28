@@ -11,27 +11,6 @@
       ]
     },
     {
-      "id": "routes",
-      "label": "Routes Layer",
-      "category": "Application",
-      "description": "Express route definitions",
-      "stack": []
-    },
-    {
-      "id": "controllers",
-      "label": "Controllers Layer",
-      "category": "Application",
-      "description": "Business logic handlers",
-      "stack": []
-    },
-    {
-      "id": "middleware",
-      "label": "Middleware Layer",
-      "category": "Application",
-      "description": "Request middleware",
-      "stack": []
-    },
-    {
       "id": "prisma",
       "label": "Prisma ORM",
       "category": "ORM",
@@ -46,6 +25,34 @@
       "category": "Database",
       "description": "Relational database",
       "stack": []
+    },
+    {
+      "id": "authcontroller.js",
+      "label": "authcontroller.js",
+      "category": "Controller",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "postCtrl.js",
+      "label": "postCtrl.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "auth.js",
+      "label": "auth.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "posts.js",
+      "label": "posts.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
     }
   ],
   "edges": [
@@ -53,7 +60,7 @@
       "id": "backend-prisma",
       "from": "backend",
       "to": "prisma",
-      "label": "ORM Calls"
+      "label": "ORM Layer"
     },
     {
       "id": "prisma-database",
@@ -62,22 +69,34 @@
       "label": "SQL Queries"
     },
     {
-      "id": "middleware-routes",
-      "from": "middleware",
-      "to": "routes",
-      "label": "Request Pipeline"
-    },
-    {
-      "id": "routes-controllers",
-      "from": "routes",
-      "to": "controllers",
-      "label": "Route Handlers"
-    },
-    {
-      "id": "controllers-prisma",
-      "from": "controllers",
+      "id": "authcontroller.js-prisma",
+      "from": "authcontroller.js",
       "to": "prisma",
-      "label": "Database Access"
+      "label": "file-prisma"
+    },
+    {
+      "id": "postCtrl.js-prisma",
+      "from": "postCtrl.js",
+      "to": "prisma",
+      "label": "file-prisma"
+    },
+    {
+      "id": "auth.js-authcontroller.js",
+      "from": "auth.js",
+      "to": "authcontroller.js",
+      "label": "route-controller"
+    },
+    {
+      "id": "posts.js-postCtrl.js",
+      "from": "posts.js",
+      "to": "postCtrl.js",
+      "label": "route-controller"
+    },
+    {
+      "id": "posts.js-auth.js",
+      "from": "posts.js",
+      "to": "auth.js",
+      "label": "route-middleware"
     }
   ]
 }
