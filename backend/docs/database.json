@@ -1,0 +1,65 @@
+{
+  "databaseType": "prisma",
+  "tables": [
+    {
+      "name": "User",
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int",
+          "nullable": false,
+          "primary": true,
+          "unique": false,
+          "default": "@default(autoincrement())"
+        },
+        {
+          "name": "username",
+          "type": "String",
+          "nullable": false,
+          "primary": false,
+          "unique": true,
+          "default": null
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "nullable": false,
+          "primary": false,
+          "unique": true,
+          "default": null
+        },
+        {
+          "name": "password",
+          "type": "String",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": "@default(now())"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": null
+        }
+      ],
+      "relations": [
+        {
+          "field": "post",
+          "target": "Post",
+          "type": "one-to-many"
+        }
+      ]
+    }
+  ]
+}
