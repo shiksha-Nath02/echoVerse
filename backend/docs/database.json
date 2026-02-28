@@ -57,7 +57,71 @@
         {
           "field": "post",
           "target": "Post",
-          "type": "one-to-many"
+          "type": "one-to-many",
+          "foreignKey": null,
+          "references": null
+        }
+      ]
+    },
+    {
+      "name": "Post",
+      "fields": [
+        {
+          "name": "id",
+          "type": "Int",
+          "nullable": false,
+          "primary": true,
+          "unique": false,
+          "default": "@default(autoincrement())"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": null
+        },
+        {
+          "name": "content",
+          "type": "String",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": null
+        },
+        {
+          "name": "authorId",
+          "type": "Int",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": null
+        },
+        {
+          "name": "createdAt",
+          "type": "DateTime",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": "@default(now())"
+        },
+        {
+          "name": "updatedAt",
+          "type": "DateTime",
+          "nullable": false,
+          "primary": false,
+          "unique": false,
+          "default": null
+        }
+      ],
+      "relations": [
+        {
+          "field": "author",
+          "target": "User",
+          "type": "one-to-one",
+          "foreignKey": null,
+          "references": null
         }
       ]
     }
