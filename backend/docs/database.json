@@ -119,9 +119,9 @@
         {
           "field": "author",
           "target": "User",
-          "type": "one-to-one",
-          "foreignKey": null,
-          "references": null
+          "type": "many-to-one",
+          "foreignKey": "authorId",
+          "references": "id"
         }
       ]
     }
