@@ -103,6 +103,7 @@ module.exports.updatePost=async(req,res)=>{
 
     try{
 
+        //i am testing something 
         //we have done this using middlewares
         // const post = await prisma.post.findUnique({ where: { id } });
         // if (post.authorId!=req.userId) return res.status(401).json({ msg: "Not Authorised"})
