@@ -1,0 +1,84 @@
+{
+  "nodes": [
+    {
+      "id": "authcontroller.js",
+      "label": "authcontroller.js",
+      "category": "Controller",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "postCtrl.js",
+      "label": "postCtrl.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "auth.js",
+      "label": "auth.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "posts.js",
+      "label": "posts.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "store.js",
+      "label": "store.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "api.js",
+      "label": "api.js",
+      "category": "File",
+      "description": "Source file",
+      "stack": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "authcontroller.js-prisma",
+      "from": "authcontroller.js",
+      "to": "prisma",
+      "label": "file-prisma"
+    },
+    {
+      "id": "postCtrl.js-prisma",
+      "from": "postCtrl.js",
+      "to": "prisma",
+      "label": "file-prisma"
+    },
+    {
+      "id": "auth.js-authcontroller.js",
+      "from": "auth.js",
+      "to": "authcontroller.js",
+      "label": "route-controller"
+    },
+    {
+      "id": "posts.js-postCtrl.js",
+      "from": "posts.js",
+      "to": "postCtrl.js",
+      "label": "route-controller"
+    },
+    {
+      "id": "posts.js-auth.js",
+      "from": "posts.js",
+      "to": "auth.js",
+      "label": "route-middleware"
+    },
+    {
+      "id": "store.js-api.js",
+      "from": "store.js",
+      "to": "api.js",
+      "label": "controller-service"
+    }
+  ]
+}
