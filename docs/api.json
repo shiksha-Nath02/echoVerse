@@ -9,6 +9,9 @@
     "/signup": {
       "post": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -19,6 +22,9 @@
     "/login": {
       "post": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -29,6 +35,9 @@
     "/me": {
       "get": {
         "summary": "Create new user",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -39,6 +48,9 @@
     "/logout": {
       "post": {
         "summary": "Create new user",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -70,6 +82,9 @@
     "/": {
       "get": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -78,6 +93,9 @@
       },
       "post": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -88,6 +106,9 @@
     "/user": {
       "get": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -98,6 +119,9 @@
     "/{id}": {
       "get": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -116,6 +140,9 @@
       },
       "put": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -134,6 +161,9 @@
       },
       "delete": {
         "summary": "",
+        "tags": [
+          "internal-api"
+        ],
         "responses": {
           "200": {
             "description": "Success"

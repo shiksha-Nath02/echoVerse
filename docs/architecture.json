@@ -8,47 +8,101 @@
       "stack": []
     },
     {
+      "id": "prisma.js",
+      "label": "prisma.js",
+      "category": "Module",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "prisma",
+      "label": "prisma",
+      "category": "Module",
+      "description": "Source file",
+      "stack": []
+    },
+    {
       "id": "postCtrl.js",
       "label": "postCtrl.js",
-      "category": "File",
+      "category": "Module",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "edge.js",
+      "label": "edge.js",
+      "category": "Module",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "index-browser.js",
+      "label": "index-browser.js",
+      "category": "Module",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "index.js",
+      "label": "index.js",
+      "category": "Entry Point",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "library.js",
+      "label": "library.js",
+      "category": "Module",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "wasm.js",
+      "label": "wasm.js",
+      "category": "Module",
+      "description": "Source file",
+      "stack": []
+    },
+    {
+      "id": "wasm-engine-edge.js",
+      "label": "wasm-engine-edge.js",
+      "category": "Module",
       "description": "Source file",
       "stack": []
     },
     {
       "id": "auth.js",
       "label": "auth.js",
-      "category": "File",
+      "category": "Module",
       "description": "Source file",
       "stack": []
     },
     {
       "id": "posts.js",
       "label": "posts.js",
-      "category": "File",
-      "description": "Source file",
-      "stack": []
-    },
-    {
-      "id": "store.js",
-      "label": "store.js",
-      "category": "File",
-      "description": "Source file",
-      "stack": []
-    },
-    {
-      "id": "api.js",
-      "label": "api.js",
-      "category": "File",
+      "category": "Module",
       "description": "Source file",
       "stack": []
     }
   ],
   "edges": [
     {
+      "id": "authcontroller.js-prisma.js",
+      "from": "authcontroller.js",
+      "to": "prisma.js",
+      "label": "file-import"
+    },
+    {
       "id": "authcontroller.js-prisma",
       "from": "authcontroller.js",
       "to": "prisma",
       "label": "file-prisma"
+    },
+    {
+      "id": "postCtrl.js-prisma.js",
+      "from": "postCtrl.js",
+      "to": "prisma.js",
+      "label": "file-import"
     },
     {
       "id": "postCtrl.js-prisma",
@@ -57,10 +111,52 @@
       "label": "file-prisma"
     },
     {
+      "id": "edge.js-edge.js",
+      "from": "edge.js",
+      "to": "edge.js",
+      "label": "file-import"
+    },
+    {
+      "id": "index-browser.js-index-browser.js",
+      "from": "index-browser.js",
+      "to": "index-browser.js",
+      "label": "file-import"
+    },
+    {
+      "id": "index.js-library.js",
+      "from": "index.js",
+      "to": "library.js",
+      "label": "file-import"
+    },
+    {
+      "id": "wasm.js-wasm-engine-edge.js",
+      "from": "wasm.js",
+      "to": "wasm-engine-edge.js",
+      "label": "file-import"
+    },
+    {
+      "id": "auth.js-authcontroller.js",
+      "from": "auth.js",
+      "to": "authcontroller.js",
+      "label": "file-import"
+    },
+    {
       "id": "auth.js-authcontroller.js",
       "from": "auth.js",
       "to": "authcontroller.js",
       "label": "route-controller"
+    },
+    {
+      "id": "posts.js-auth.js",
+      "from": "posts.js",
+      "to": "auth.js",
+      "label": "file-import"
+    },
+    {
+      "id": "posts.js-postCtrl.js",
+      "from": "posts.js",
+      "to": "postCtrl.js",
+      "label": "file-import"
     },
     {
       "id": "posts.js-postCtrl.js",
@@ -73,12 +169,6 @@
       "from": "posts.js",
       "to": "auth.js",
       "label": "route-middleware"
-    },
-    {
-      "id": "store.js-api.js",
-      "from": "store.js",
-      "to": "api.js",
-      "label": "controller-service"
     }
   ]
 }
